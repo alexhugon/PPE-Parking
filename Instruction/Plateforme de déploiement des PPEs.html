@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://172.16.0.51/~amesle/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="hevea 2.30">
+<style type="text/css">
+.c000{font-family:monospace}
+.c001{font-style:italic}
+.li-itemize{margin:1ex 0ex;}
+.toc{list-style:none;}
+div.footnotetext P{margin:0px; text-indent:1em;}
+.title{margin:2ex auto;text-align:center}
+.titlemain{margin:1ex 2ex 2ex 1ex;}
+div table{margin-left:inherit;margin-right:inherit;margin-bottom:2px;margin-top:2px}
+td table{margin:auto;}
+table{border-collapse:collapse;}
+td{padding:0;}
+pre{text-align:left;margin-left:0ex;margin-right:auto;}
+blockquote{margin-left:4ex;margin-right:4ex;text-align:left;}
+td p{margin:0px;}
+body{/*margin:15px;*/
+text-align:justify ; padding:20px
+}
+table{background-color: #666633; color:#000000;
+padding:10px ; /*border:thin solid ; */ white-space:pre ; margin:5pt ; margin-left:20pt ; border-radius:10px;}
+.title{/*font-size:1.6em; */ color:#000000; background-color:#ffdb77; padding:20px; 
+text-align:center; border-radius: 20px; 
+}
+.titlemain{/*font-size:1.6em; color:#000000; background-color:#ffdb43;padding:5px;
+text-align:center; border-radius: 10px;*/
+}
+.section{/* font-size:1.6em ; */ padding:5px ; color:#FFFFFF ; background-color:#6D8ADA /* ; font-weight:normal ; font-weight:bold ;
+font-size:medium ; margin-left:0pt*/ ; padding: 5px ;
+border-radius:5px
+}
+.subsection{/* font-size:1.6em ; */ padding:5px ; color:#FFFFFF ; background-color:#6D8ADA /* ; font-weight:normal ; font-weight:bold ;
+font-size:medium ; margin-left:0pt*/ ; padding: 5px ;
+border-radius:5px
+}
+</style>
+<title>Plateforme de déploiement des PPEs
+</title>
+</head>
+<body>
+<!--HEVEA command line is: /usr/bin/hevea -v -fix index.tex -O -->
+<!--CUT STYLE article--><!--LINKS <arg UP>../</arg>-->
+<!--SETENV <arg PREVTXT><span class="glyphicon glyphicon-arrow-left"></span></arg><arg UPTXT><span class="glyphicon glyphicon-arrow-up"></span></arg><arg NEXTTXT><span class="glyphicon glyphicon-arrow-right"></span></arg>-->
+<!--CUT DEF section 1 --><table class="title"><tbody><tr><td style="padding:1ex"><h1 class="titlemain">Plateforme de déploiement des PPEs</h1></td></tr>
+</tbody></table><p>Soyez les bienvenus sur la plateforme de déploiement de vos PPE. Vous trouverez
+ici les indications qui vous permettront de déployer vos applications. </p><!--TOC section id="sec1" Table des matières-->
+<h2 class="section" id="sec1">Table des matières</h2><!--SEC END --><ul class="toc"><li class="li-toc">
+<a href="http://172.16.0.51/~amesle/#sec2">1&nbsp;&nbsp;Vos obligations</a>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec3">2&nbsp;&nbsp;Identifiants de connexion</a>
+<ul class="toc"><li class="li-toc">
+<a href="http://172.16.0.51/~amesle/#sec4">2.1&nbsp;&nbsp;Login</a>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec5">2.2&nbsp;&nbsp;Password</a>
+</li></ul>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec6">3&nbsp;&nbsp;Serveur Web</a>
+<ul class="toc"><li class="li-toc">
+<a href="http://172.16.0.51/~amesle/#sec7">3.1&nbsp;&nbsp;Espace Web</a>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec8">3.2&nbsp;&nbsp;SSH</a>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec9">3.3&nbsp;&nbsp;Git</a>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec10">3.4&nbsp;&nbsp;Filezilla</a>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec11">3.5&nbsp;&nbsp;Url rewriting</a>
+</li></ul>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec12">4&nbsp;&nbsp;Serveur de base de données</a>
+<ul class="toc"><li class="li-toc">
+<a href="http://172.16.0.51/~amesle/#sec13">4.1&nbsp;&nbsp;phpmyadmin</a>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec14">4.2&nbsp;&nbsp;Ligne de commande</a>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec15">4.3&nbsp;&nbsp;Depuis une bibliothèque</a>
+</li></ul>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec16">5&nbsp;&nbsp;En cas de problème</a>
+<ul class="toc"><li class="li-toc">
+<a href="http://172.16.0.51/~amesle/#sec17">5.1&nbsp;&nbsp;Page "It Works!"</a>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec18">5.2&nbsp;&nbsp;Une seule base de données dans phpmyadmin</a>
+</li><li class="li-toc"><a href="http://172.16.0.51/~amesle/#sec19">5.3&nbsp;&nbsp;Je ne trouve pas le répertoire <span class="c000">public_html</span></a>
+</li></ul>
+</li></ul>
+<!--TOC section id="sec2" Vos obligations-->
+<h2 class="section" id="sec2">1&nbsp;&nbsp;Vos obligations</h2><!--SEC END --><p>Vous avez l’obligation pour les CCFs :
+</p><ul class="itemize"><li class="li-itemize">
+De déployer vos bases de données sur le serveur.
+</li><li class="li-itemize">De déployer toutes vos applications web sur le serveur.
+</li></ul>
+<!--TOC section id="sec3" Identifiants de connexion-->
+<h2 class="section" id="sec3">2&nbsp;&nbsp;Identifiants de connexion</h2><!--SEC END --><p>Vos identifiants de connexion sont initialement les mêmes sur tous les serveurs. </p>
+<!--TOC subsection id="sec4" Login-->
+<h3 class="subsection" id="sec4">2.1&nbsp;&nbsp;Login</h3><!--SEC END --><p>Votre login est formé de la première lettre de votre prénom suivi de votre nom de famille, sans espace ni caractère spécial. Par exemple :</p><ul class="itemize"><li class="li-itemize">
+<span class="c000">amesle</span> pour Alexandre Meslé
+</li><li class="li-itemize"><span class="c000">aescriva</span> pour Madame Escriva
+</li></ul>
+<!--TOC subsection id="sec5" Password-->
+<h3 class="subsection" id="sec5">2.2&nbsp;&nbsp;Password</h3><!--SEC END --><p>Votre password par défaut est <span class="c000">azerty</span>, il est très fortement conseillé de le modifier à la première connexion.</p>
+<!--TOC section id="sec6" Serveur Web-->
+<h2 class="section" id="sec6">3&nbsp;&nbsp;Serveur Web</h2><!--SEC END --><p>Vous trouverez le serveur web à l’adresse <a href="http://172.16.0.51/">172.16.0.51</a>. Pour déployer une application web, il vous suffit de placer les fichiers sources dans le répertoire <span class="c000">~/public_html</span>.</p>
+<!--TOC subsection id="sec7" Espace Web-->
+<h3 class="subsection" id="sec7">3.1&nbsp;&nbsp;Espace Web</h3><!--SEC END --><p>Votre espace web est visible à l’URL <a href="http://172.16.0.51/~amesle">172.16.0.51/~login</a>. </p>
+<!--TOC subsection id="sec8" SSH-->
+<h3 class="subsection" id="sec8">3.2&nbsp;&nbsp;SSH</h3><!--SEC END --><p>Connectez-vous une première fois en SSH pour modifier votre mot de passe.</p><ul class="itemize"><li class="li-itemize">
+Sous linux, utilisez la commande <span class="c000">ssh login@172.16.0.51</span>
+</li><li class="li-itemize">Sous windows, utilisez le logiciel <a href="https://the.earth.li/~sgtatham/putty/latest/x86/putty.exe">putty</a>.
+</li></ul><p>Le mot de passe se modifie avec la commande <span class="c000">passwd</span>.</p>
+<!--TOC subsection id="sec9" Git-->
+<h3 class="subsection" id="sec9">3.3&nbsp;&nbsp;Git</h3><!--SEC END --><p><span class="c000">git</span> est installé sur le serveur, il est fortement conseillé de l’utiliser pour déployer votre projet. Vous trouverez
+un tuto sur le site de <a href="https://www.grafikart.fr/blog/deployer-site-git">Grafikart</a>.</p>
+<!--TOC subsection id="sec10" Filezilla-->
+<h3 class="subsection" id="sec10">3.4&nbsp;&nbsp;Filezilla</h3><!--SEC END --><p>Vous pouvez aussi vous connecter à l’aide d’un client FTP en utilisant l’URL <a href="http://172.16.0.51/">172.16.0.51</a>.</p><p><span class="c001">Achtung ! En général je désactive le service FTP. Si c’est le cas, utilisez </span><a href="https://winscp.net/eng/download.php"><span class="c001">WinScp</span></a>.</p>
+<!--TOC subsection id="sec11" Url rewriting-->
+<h3 class="subsection" id="sec11">3.5&nbsp;&nbsp;Url rewriting</h3><!--SEC END --><p>Attention, vos applications web vont être perturbées par les URL utilisées par apache. Adaptez et utilisez le fichier
+<span class="c000">.htaccess</span> suivant pour permettre l’URL rewriting :</p><pre class="prettyprint">RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([\~a-zA-Z0-9]*)\/?$ /~votrelogin/index.php?p=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9]*)\/([0-9]{1,4})\/?$ /~votrelogin/index.php?p=$1&amp;id=$2 [QSA,L]
+RewriteRule ^([a-zA-Z0-9]*)\/([0-9]{1,4})\/([a-zA-Z]*)?$ /~votrelogin/index.php?p=$1&amp;id=$2&amp;action=$3 [QSA,L]
+</pre>
+<!--TOC section id="sec12" Serveur de base de données-->
+<h2 class="section" id="sec12">4&nbsp;&nbsp;Serveur de base de données</h2><!--SEC END --><p>Le serveur de bases de données se trouve à l’adresse <a href="http://172.16.0.52/">172.16.0.52</a>. </p>
+<!--TOC subsection id="sec13" phpmyadmin-->
+<h3 class="subsection" id="sec13">4.1&nbsp;&nbsp;phpmyadmin</h3><!--SEC END --><p>Phpmyadmin se trouve à l’adresse <a href="http://172.16.0.52/phpmyadmin">http://172.16.0.52/phpmyadmin</a>. Vos identifiants de connexion sont par défaut les mêmes.</p><p>N’oubliez pas de modifier le mot de passe !</p><ul class="itemize"><li class="li-itemize">
+—→Page d’accueil
+</li><li class="li-itemize">—→Paramètres généraux
+</li><li class="li-itemize">—→Modifier le mot de passe
+</li></ul>
+<!--TOC subsection id="sec14" Ligne de commande-->
+<h3 class="subsection" id="sec14">4.2&nbsp;&nbsp;Ligne de commande</h3><!--SEC END --><p>Depuis votre ordinateur personnel ou le serveur web, vous pouvez vous connecter à mysql avec la commande 
+<span class="c000">mysql -u login -h 172.16.0.52 -p</span></p>
+<!--TOC subsection id="sec15" Depuis une bibliothèque-->
+<h3 class="subsection" id="sec15">4.3&nbsp;&nbsp;Depuis une bibliothèque</h3><!--SEC END --><p>Pour vous connecter depuis PDO ou JDBC :</p><ul class="itemize"><li class="li-itemize">
+host : <a href="http://172.16.0.52/">172.16.0.52</a>
+</li><li class="li-itemize">db : votre login
+</li><li class="li-itemize">Mêmes login et password que pour accéder à phpmyadmin. 
+</li></ul>
+<!--TOC section id="sec16" En cas de problème-->
+<h2 class="section" id="sec16">5&nbsp;&nbsp;En cas de problème</h2><!--SEC END --><p>En cas de problème technique, contactez <a href="http://alexandre-mesle.com/index.php/contact/me-contacter/">Alexandre Meslé</a></p>
+<!--TOC subsection id="sec17" Page "It Works!"-->
+<h3 class="subsection" id="sec17">5.1&nbsp;&nbsp;Page "It Works!"</h3><!--SEC END --><p>Vous vous êtes connecté au serveur <a href="http://172.16.0.52/">172.16.0.52</a> au lieu de <a href="http://172.16.0.51/">172.16.0.51</a>.</p>
+<!--TOC subsection id="sec18" Une seule base de données dans phpmyadmin-->
+<h3 class="subsection" id="sec18">5.2&nbsp;&nbsp;Une seule base de données dans phpmyadmin</h3><!--SEC END --><p>Vous ne pouvez voir qu’une seule base de données et vous n’avez pas les droits pour en créer une autre. A vous de préfixer
+vos tables pour permettre le déploiement de plusieurs applications dans la même base de données.</p>
+<!--TOC subsection id="sec19" Je ne trouve pas le répertoire <span class="c000">public_html</span>-->
+<h3 class="subsection" id="sec19">5.3&nbsp;&nbsp;Je ne trouve pas le répertoire <span class="c000">public_html</span></h3><!--SEC END --><p>Vous devez le créer dans votre répertoire personnel avec la commande</p><pre class="prettyprint">mkdir ~/public_html
+</pre><!--CUT END -->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+<!--FOOTER-->
+<hr style="height:2"><blockquote class="quote"><em>Ce document a été traduit de L<sup>A</sup>T<sub>E</sub>X par </em><a href="http://hevea.inria.fr/"><em>H<span style="font-size:small"><sup>E</sup></span>V<span style="font-size:small"><sup>E</sup></span>A</em></a></blockquote>
+
+</body></html>
