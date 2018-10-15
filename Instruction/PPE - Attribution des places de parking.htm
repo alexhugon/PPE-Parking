@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="hevea 2.30">
+<style type="text/css">
+.li-itemize{margin:1ex 0ex;}
+.toc{list-style:none;}
+div.footnotetext P{margin:0px; text-indent:1em;}
+.title{margin:2ex auto;text-align:center}
+.titlemain{margin:1ex 2ex 2ex 1ex;}
+div table{margin-left:inherit;margin-right:inherit;margin-bottom:2px;margin-top:2px}
+td table{margin:auto;}
+table{border-collapse:collapse;}
+td{padding:0;}
+pre{text-align:left;margin-left:0ex;margin-right:auto;}
+blockquote{margin-left:4ex;margin-right:4ex;text-align:left;}
+td p{margin:0px;}
+body{/*margin:15px;*/
+text-align:justify ; padding:20px
+}
+table{background-color: #666633; color:#000000;
+padding:10px ; /*border:thin solid ; */ white-space:pre ; margin:5pt ; margin-left:20pt ; border-radius:10px;}
+.title{/*font-size:1.6em; */ color:#000000; background-color:#ffdb77; padding:20px; 
+text-align:center; border-radius: 20px; 
+}
+.titlemain{/*font-size:1.6em; color:#000000; background-color:#ffdb43;padding:5px;
+text-align:center; border-radius: 10px;*/
+}
+.section{/* font-size:1.6em ; */ padding:5px ; color:#FFFFFF ; background-color:#6D8ADA /* ; font-weight:normal ; font-weight:bold ;
+font-size:medium ; margin-left:0pt*/ ; padding: 5px ;
+border-radius:5px
+}
+.subsection{/* font-size:1.6em ; */ padding:5px ; color:#FFFFFF ; background-color:#6D8ADA /* ; font-weight:normal ; font-weight:bold ;
+font-size:medium ; margin-left:0pt*/ ; padding: 5px ;
+border-radius:5px
+}
+</style>
+<title>PPE - Attribution des places de parking
+</title>
+</head>
+<body>
+<!--HEVEA command line is: /usr/bin/hevea -v -fix index.tex -O -->
+<!--CUT STYLE article--><!--LINKS <arg UP>../</arg>-->
+<!--SETENV <arg PREVTXT><span class="glyphicon glyphicon-arrow-left"></span></arg><arg UPTXT><span class="glyphicon glyphicon-arrow-up"></span></arg><arg NEXTTXT><span class="glyphicon glyphicon-arrow-right"></span></arg>-->
+<!--CUT DEF section 1 --><table class="title"><tbody><tr><td style="padding:1ex"><h1 class="titlemain">PPE - Attribution des places de parking</h1></td></tr>
+</tbody></table><!--TOC section id="sec1" Table des matières-->
+<h2 class="section" id="sec1">Table des matières</h2><!--SEC END --><ul class="toc"><li class="li-toc">
+<a href="#sec2">1&nbsp;&nbsp;Présentation</a>
+</li><li class="li-toc"><a href="#sec3">2&nbsp;&nbsp;Spécification du besoin</a>
+</li><li class="li-toc"><a href="#sec4">3&nbsp;&nbsp;Résultats attendus</a>
+<ul class="toc"><li class="li-toc">
+<a href="#sec5">3.1&nbsp;&nbsp;Sécurité</a>
+</li><li class="li-toc"><a href="#sec6">3.2&nbsp;&nbsp;Gestion des mots de passe</a>
+</li><li class="li-toc"><a href="#sec7">3.3&nbsp;&nbsp;Espace utilisateur</a>
+</li><li class="li-toc"><a href="#sec8">3.4&nbsp;&nbsp;Espace administrateur</a>
+</li><li class="li-toc"><a href="#sec9">3.5&nbsp;&nbsp;Pages web</a>
+</li><li class="li-toc"><a href="#sec10">3.6&nbsp;&nbsp;Documentation</a>
+</li><li class="li-toc"><a href="#sec11">3.7&nbsp;&nbsp;Accès depuis le réseau local</a>
+</li></ul>
+</li><li class="li-toc"><a href="#sec12">4&nbsp;&nbsp;Productions</a>
+<ul class="toc"><li class="li-toc">
+<a href="#sec13">4.1&nbsp;&nbsp;Chef de projet</a>
+</li><li class="li-toc"><a href="#sec14">4.2&nbsp;&nbsp;Équipe</a>
+</li><li class="li-toc"><a href="#sec15">4.3&nbsp;&nbsp;Individuel</a>
+</li></ul>
+</li></ul>
+<!--TOC section id="sec2" Présentation-->
+<h2 class="section" id="sec2">1&nbsp;&nbsp;Présentation</h2><!--SEC END --><p>Afin d’éviter le stationnement sauvage dans le labyrinthe qu’est le parking, 
+il a été décidé d’attribuer à chaque membre qui le demandait une place 
+de parking numérotée.</p>
+<!--TOC section id="sec3" Spécification du besoin-->
+<h2 class="section" id="sec3">2&nbsp;&nbsp;Spécification du besoin</h2><!--SEC END --><ul class="itemize"><li class="li-itemize">
+Le front-office doit être sécurisé et n’accepter que les
+demandes du personnel des ligues. Les inscriptions au 
+service de réservation de place doivent être validées (ou créées)
+par un administrateur.
+</li><li class="li-itemize">L’administrateur, seul utilisateur du back-office, doit pouvoir 
+éditer la liste des places et gérer les inscriptions
+des utilisateurs.
+</li><li class="li-itemize">Lorsqu’un utilisateur en fait la demande, une place libre lui est est attribuée
+aléatoirement et immédiatement par l’application, la réservation expire automatiquement
+au bout d’une durée par défaut déterminée par l’administrateur.
+</li><li class="li-itemize">Si une demande ne peut pas être satisfaite, l’utilisateur est placé 
+en liste d’attente. 
+</li><li class="li-itemize">Un utilisateur ou l’administateur peuvent fermer une réservation avant la date d’expiration prévue.
+Une fois celle-ci expirée, l’utilisateur doit refaire une demande s’il souhaite obtenir une place.
+</li></ul>
+<!--TOC section id="sec4" Résultats attendus-->
+<h2 class="section" id="sec4">3&nbsp;&nbsp;Résultats attendus</h2><!--SEC END --><p>Il serait souhaitable que les fonctionnalités ci-après soient mises
+en place. Si vous n’avez pas le temps de toutes les traiter, 
+occupez-vous d’abord des plus importantes. S’il reste du temps, 
+cherchez des améliorations à apporter.</p>
+<!--TOC subsection id="sec5" Sécurité-->
+<h3 class="subsection" id="sec5">3.1&nbsp;&nbsp;Sécurité</h3><!--SEC END --><ul class="itemize"><li class="li-itemize">
+Protection des accès par mot de passe.
+</li><li class="li-itemize">Contrôles de saisie des données côté serveur.
+</li><li class="li-itemize">Contrôles de saisie côté client.
+</li><li class="li-itemize">Protection contre les attaques par injection.
+</li></ul>
+<!--TOC subsection id="sec6" Gestion des mots de passe-->
+<h3 class="subsection" id="sec6">3.2&nbsp;&nbsp;Gestion des mots de passe</h3><!--SEC END --><ul class="itemize"><li class="li-itemize">
+Fonction "mot de passe perdu ?".
+</li><li class="li-itemize">Hachage des mots de passe.
+</li></ul>
+<!--TOC subsection id="sec7" Espace utilisateur-->
+<h3 class="subsection" id="sec7">3.3&nbsp;&nbsp;Espace utilisateur</h3><!--SEC END --><ul class="itemize"><li class="li-itemize">
+Vérification de l’identité par saisie d’un mot de passe.
+</li><li class="li-itemize">Possibilité de visualiser le numéro de place attribuée, ainsi que l’historique des
+places précédemment attribuées.
+</li><li class="li-itemize">Possibilité de faire une demande de réservation.
+</li><li class="li-itemize">Possibilité de connaître son rang sur la file d’attente.
+</li><li class="li-itemize">Modification du mot de passe.
+</li></ul>
+<!--TOC subsection id="sec8" Espace administrateur-->
+<h3 class="subsection" id="sec8">3.4&nbsp;&nbsp;Espace administrateur</h3><!--SEC END --><ul class="itemize"><li class="li-itemize">
+Protection de l’accès par mot de passe. 
+</li><li class="li-itemize">Édition de la liste des utilisateurs, réinitialisation des mots de passe.
+</li><li class="li-itemize">Édition de la liste des places
+</li><li class="li-itemize">Consultation de la liste d’attente.
+</li><li class="li-itemize">Consultation de l’historique d’attribution des places. 
+</li><li class="li-itemize">Attribution manuelle des places. 
+</li><li class="li-itemize">Édition de la file d’attente (modification de la position des personnes en attente). 
+</li></ul>
+<!--TOC subsection id="sec9" Pages web-->
+<h3 class="subsection" id="sec9">3.5&nbsp;&nbsp;Pages web</h3><!--SEC END --><ul class="itemize"><li class="li-itemize">
+Mise aux normes HTML5 et CSS des pages WEB.
+</li><li class="li-itemize">Utilisation d’un design responsive.
+</li></ul>
+<!--TOC subsection id="sec10" Documentation-->
+<h3 class="subsection" id="sec10">3.6&nbsp;&nbsp;Documentation</h3><!--SEC END --><ul class="itemize"><li class="li-itemize">
+Liste des tâches à accomplir <span style="font-weight:bold">triées par ordre de priorité</span>.
+</li><li class="li-itemize">Le plan du site, dans lequel vous préciserez les URLs.
+</li><li class="li-itemize">Documentation utilisateur, accessible depuis l’application.
+</li><li class="li-itemize">Documentation permettant de comprendre comment est construite
+l’application (shémas, impressions d’écran, architecture de l’application, MCD...). 
+</li></ul>
+<!--TOC subsection id="sec11" Accès depuis le réseau local-->
+<h3 class="subsection" id="sec11">3.7&nbsp;&nbsp;Accès depuis le réseau local</h3><!--SEC END --><ul class="itemize"><li class="li-itemize">
+Installation de l’application sur un serveur accessible depuis le réseau local.
+</li></ul>
+<!--TOC section id="sec12" Productions-->
+<h2 class="section" id="sec12">4&nbsp;&nbsp;Productions</h2><!--SEC END -->
+<!--TOC subsection id="sec13" Chef de projet-->
+<h3 class="subsection" id="sec13">4.1&nbsp;&nbsp;Chef de projet</h3><!--SEC END --><p>Remise à la fin de la séance d’un rapport indiquant :</p><ul class="itemize"><li class="li-itemize">
+La répartition des tâches et le planning (il est conseillé de faire 
+un diagramme de Gantt).
+</li></ul><p>Il est conseillé d’utiliser un logiciel de gestion de tâches et de travail collaboratif
+(Trello, Asana, Slack, etc.)</p>
+<!--TOC subsection id="sec14" Équipe-->
+<h3 class="subsection" id="sec14">4.2&nbsp;&nbsp;Équipe</h3><!--SEC END --><ul class="itemize"><li class="li-itemize">
+Présentation sur diapositives (pdf ou powerpoint) des productions 
+par l’équipe. Le chef de projet anime la présentation, mais tous 
+les membres de l’équipe doivent intervenir au moins une fois.
+</li><li class="li-itemize">Démonstration des productions. 
+</li></ul>
+<!--TOC subsection id="sec15" Individuel-->
+<h3 class="subsection" id="sec15">4.3&nbsp;&nbsp;Individuel</h3><!--SEC END --><p>Ajoutez à votre porte-folio :</p><ul class="itemize"><li class="li-itemize">
+Un compte-rendu d’activité détaillant le travail 
+que vous avez effectué (extraits de code, explications, 
+impressions d’écran, compétences du référentiel mises en oeuvre).
+
+	</li><li class="li-itemize">Le code source sur <a href="http://github.com/">Github</a>.
+
+</li><li class="li-itemize">La documentation utilisateur.
+</li><li class="li-itemize">La documentation développeur.</li></ul><p>
+]</p><!--CUT END -->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+<!--FOOTER-->
+<hr style="height:2"><blockquote class="quote"><em>Ce document a été traduit de L<sup>A</sup>T<sub>E</sub>X par </em><a href="http://hevea.inria.fr/"><em>H<span style="font-size:small"><sup>E</sup></span>V<span style="font-size:small"><sup>E</sup></span>A</em></a></blockquote>
+
+</body></html>
